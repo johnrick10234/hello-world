@@ -1,3 +1,3 @@
-userNum = int(input("Please enter an integer"))
+userNum = int(input())
 userNumSquared = userNum * userNum
 print(userNumSquared)
