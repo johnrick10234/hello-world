@@ -4,8 +4,9 @@ area = WH*WW
 print("Wall area:",area,"square feet")
 
 gal = float(area/350)
+cans = round(gal)
 print("Paint needed:",'{:.2f} gallons'.format(gal))
-print("Paint needed:",round(gal),"can(s)\n")
+print("Cans needed:",cans,"can(s)\n")
 
 color = input('Choose a color to paint the wall:\n')
 dict = {
@@ -13,4 +14,4 @@ dict = {
     "blue":25,
     "green":23
 }
-print('Cost of purchasing',color,'paint: $'+str(dict[color]))
+print('Cost of purchasing',color,'paint: $'+str(cans*dict[color]))
