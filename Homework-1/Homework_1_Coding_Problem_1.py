@@ -12,9 +12,9 @@ y2 = int(input("Year: "))
 
 years = y1 - y2
 
-if m2<m1:
+if m2>m1:
     years-=1
-elif m2 < m1 and d2 < d1:
+elif m2 > m1 and d2 < d1:
     years-=1
 elif m2 == m1 and d2 > d1:
     years
