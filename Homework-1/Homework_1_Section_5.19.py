@@ -24,6 +24,7 @@ if first == '-':
     print("Service 1: No service")
 else:
     print("Service 1:",first+",","$"+str(uno))
+
 if second == '-':
     print ("Service 2: No service")
 else:
