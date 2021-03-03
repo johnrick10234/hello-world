@@ -1,23 +1,16 @@
 #John Rick Santillan            ID: 1910045
 
 pw = input()
-mp = ''
 
-p=0
-while p<len(pw):
-    np = pw[p]
-    if np == 'a':
-        mp+= '@'
-    elif np == 'i':
-        mp+= '!'
-    elif np == 'B':
-        mp+= '8'
-    elif np == 'm':
-        mp+='M'
-    elif np=='o':
-        mp+='.'
-    else:
-        mp+=np
-    p+=1
-print(mp+str('q*s'))
+pw = pw.replace('i','!')
+pw = pw.replace('a','@')
+pw = pw.replace('m','M')
+pw = pw.replace('B','8')
+pw = pw.replace('o','.')
+
+
+
+
+
+print(pw+str('q*s'))
 
