@@ -4,6 +4,7 @@ from datetime import datetime
 from datetime import date
 x= date.today()
 months = {"January":"1", 'February':'2','March':'3','April':'4','May':'5','June':'6', 'July':'7', 'August':'8','September':'9','October':'10','November':'11','December':'12'}
+
 inputs = open("inputDates.txt","r")
 input_line = inputs.read().splitlines()
 for i in input_line:
@@ -15,7 +16,7 @@ for i in input_line:
 
     var2 = var1[0]
 
-    # var3 = var1[1].split(',')
+
     var4 = var1[1][:-1]
     var5 = var1[2]
 
@@ -25,9 +26,6 @@ for i in input_line:
         var7 =datetime.strptime(var6,"%m/%d/%Y").date()
         if var7 < x:
             print(var6)
-
-
-
 
 
 
