@@ -7,9 +7,9 @@ class FoodItem:
         self.carbs = carbs
         self.proteins = proteins
 
-    def get_calories(self, num_servings):
+    def get_calories(self, servings):
         # Calorie formula
-        calories = ((self.fat * 9) + (self.carbs * 4) + (self.protein * 4)) * num_servings;
+        calories = ((self.fats * 9) + (self.carbs * 4) + (self.proteins * 4)) * servings;
         return calories
 
     def print_info(self):
@@ -25,5 +25,6 @@ if __name__ == "__main__":
     number_carbs = float(input())
     number_proteins = float(input())
 
-servings = float(input())
+serving = float(input())
 food1.print_info()
+print("Number of calories for","{:.2f}".format(serving),"serving(s):","{:.2f}".format(food1.get_calories(serving)))
