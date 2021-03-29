@@ -17,7 +17,7 @@ if __name__ == "__main__":
     Item1.item_name = item_name
     Item1.item_price = item_price
     Item1.item_quantity = item_quantity
-    print()
+    # print()
     print("Item 2")
     Item2=ItemToPurchase()
     item_name=input("Enter the item name:\n")
@@ -28,12 +28,15 @@ if __name__ == "__main__":
     Item2.item_quantity = item_quantity
 
 
-    Item1.item_cost()
-    Item2.item_cost()
+    # Item1.item_cost()
+    # Item2.item_cost()
+
+print('TOTAL COST')
+Item1.item_cost()
+Item2.item_cost()
+print()
+print('Total: ', )
 
 
-
-print(Item1.item_cost)
-print(Item2.item_cost)
 
 
