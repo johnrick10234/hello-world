@@ -7,16 +7,33 @@ class ItemToPurchase:
         print(self.item_name,self.item_quantity,"@","$"+str(self.item_price),'=','$'+str(self.item_price * self.item_quantity))
 
 if __name__ == "__main__":
-    Item=ItemToPurchase()
-    item_name=input()
-    item_price=float(input())
-    item_quantity=int(input())
+    # Item1 = ItemToPurchase()
+    # Item2 = ItemToPurchase()
+    print("Item 1")
+    Item1=ItemToPurchase()
+    item_name=input("Enter the item name:\n")
+    item_price=float(input("Enter the item price\n"))
+    item_quantity=int(input("Enter the item quantity\n"))
+    Item1.item_name = item_name
+    Item1.item_price = item_price
+    Item1.item_quantity = item_quantity
+    print()
+    print("Item 2")
+    Item2=ItemToPurchase()
+    item_name=input("Enter the item name:\n")
+    item_price=float(input("Enter the item price:\n"))
+    item_quantity=int(input("Enter the item quantity:\n"))
+    Item2.item_name = item_name
+    Item2.item_price = item_price
+    Item2.item_quantity = item_quantity
 
 
-    Item.item_name = item_name
-    Item.item_price = item_price
-    Item.item_quantity = item_quantity
-Item.item_cost()
-print(Item.item_cost)
+    Item1.item_cost()
+    Item2.item_cost()
+
+
+
+print(Item1.item_cost)
+print(Item2.item_cost)
 
 
