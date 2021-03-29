@@ -18,6 +18,6 @@ if __name__=="__main__":
 
 
     if team.get_win_percentage()>=0.5:
-        print('Congratulations','Team',team_name,"has a winning average!")
+        print('Congratulations,','Team',team_name,"has a winning average!")
     else:
         print('Team',team_name,'has a losing average.')
