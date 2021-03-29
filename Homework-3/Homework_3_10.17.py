@@ -30,12 +30,12 @@ if __name__ == "__main__":
 
     # Item1.item_cost()
     # Item2.item_cost()
-
+total = (Item1.item_price * Item1.item_quantity) + (Item2.item_price * Item2.item_quantity)
 print('TOTAL COST')
 Item1.item_cost()
 Item2.item_cost()
 print()
-print('Total: ', )
+print('Total:','$'+str(total))
 
 
 
