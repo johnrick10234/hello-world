@@ -28,3 +28,7 @@ if __name__ == "__main__":
 serving = float(input())
 food1.print_info()
 print("Number of calories for","{:.2f}".format(serving),"serving(s):","{:.2f}".format(food1.get_calories(serving)))
+food2 = FoodItem(name_item,number_fats,number_carbs,number_proteins)
+print()
+food2.print_info()
+print("Number of calories for","{:.2f}".format(serving),"serving(s):","{:.2f}".format(food2.get_calories(serving)))
