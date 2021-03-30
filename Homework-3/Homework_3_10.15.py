@@ -1,3 +1,5 @@
+#John Rick Santillan #1910045
+
 class Team:
     def __init__(self):
         self.team_name="none"
