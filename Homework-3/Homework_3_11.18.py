@@ -1,3 +1,5 @@
+#John Rick Santillan #1910045
+
 my_list = input().split()
 ans=[]
 for n in my_list:
