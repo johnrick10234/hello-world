@@ -7,8 +7,6 @@ class ItemToPurchase:
         print(self.item_name,self.item_quantity,"@","$"+str(self.item_price).split('.')[0],'=','$'+str(self.item_price * self.item_quantity).split('.')[0])
 
 if __name__ == "__main__":
-    # Item1 = ItemToPurchase()
-    # Item2 = ItemToPurchase()
     print("Item 1")
     Item1=ItemToPurchase()
     item_name=input("Enter the item name:\n")
@@ -28,13 +26,13 @@ if __name__ == "__main__":
     Item2.item_quantity = item_quantity
 
 
-print()
-total = (Item1.item_price * Item1.item_quantity) + (Item2.item_price * Item2.item_quantity)
-print('TOTAL COST')
-Item1.print_item_cost()
-Item2.print_item_cost()
-print()
-print('Total:','$'+str(total).split('.')[0])
+    print()
+    total = (Item1.item_price * Item1.item_quantity) + (Item2.item_price * Item2.item_quantity)
+    print('TOTAL COST')
+    Item1.print_item_cost()
+    Item2.print_item_cost()
+    print()
+    print('Total:','$'+str(total).split('.')[0])
 
 
 
