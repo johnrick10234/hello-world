@@ -1,3 +1,5 @@
+#John Rick Santillan #1910045
+
 class ItemToPurchase:
     def __init__(self):
         self.item_name = "none"
