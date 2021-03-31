@@ -26,7 +26,7 @@ class ShoppingCart:
                 tremove = True
                 break
         if not tremove:
-            print("Item not found in cart. Nothing removed")
+            print("Item not found in cart. Nothing removed.")
         # if item_name not in self.cart_item:
         #     print("Item not found in cart. Nothing removed")
         # else:
@@ -45,7 +45,7 @@ class ShoppingCart:
                 break
 
         if not m_item:
-            print("Item not found in cart. Nothing removed.")
+            print("Item not found in cart. Nothing modified.")
     def get_num_item_in_cart(self):
         num_item=0
         for i in self.cart_item:
@@ -61,9 +61,13 @@ class ShoppingCart:
     def print_total(self):
         total_cost = self.get_cost_of_cart()
         if(total_cost==0):
-            print("SHOPPING CART IS EMPTY")
+            print(self.customer_name+"'s","Shopping Cart -",self.current_date)
+            print('Number of Items:',self.get_num_item_in_cart())
+            print("\nSHOPPING CART IS EMPTY\n")
+            print('Total:', '$' + str(total_cost))
+
         else:
-            print("OUTPUT SHIPPING CART")
+            # print("OUTPUT SHOPPING CART")
             print(self.customer_name+"'s","Shopping Cart -",self.current_date)
             print('Number of Items:',self.get_num_item_in_cart())
             print()
@@ -84,22 +88,28 @@ class ShoppingCart:
 def print_menu(nc):
     new_cart=nc
     key = ''
+    # print('MENU')
+    # print('a - Add item to cart')
+    # print('r - Remove item from cart')
+    # print('c - Change item quantity')
+    # print("i - Output items' descriptions")
+    # print('o - Output shopping cart')
+    # print('q - Quit\n')
     while (key != 'q'):
-        print('MENU')
+        print('\nMENU')
         print('a - Add item to cart')
         print('r - Remove item from cart')
         print('c - Change item quantity')
-        print("i - Output item's description")
+        print("i - Output items' descriptions")
         print('o - Output shopping cart')
-        print('q - Quit')
-        print()
-        key = input('Choose an option:')
+        print('q - Quit\n')
+        key = input('Choose an option:\n')
         if (key == "a"):
             print('ADD ITEM TO CART')
-            item_name = input('Enter the item name:')
-            item_description = input('Enter the item description:')
-            item_price = int(input('Enter the item price:'))
-            item_quantity = int(input('Enter the item quantity:'))
+            item_name = input('Enter the item name:\n')
+            item_description = input('Enter the item description:\n')
+            item_price = int(input('Enter the item price:\n'))
+            item_quantity = int(input('Enter the item quantity:\n'))
             itemToPurchase = ItemToPurchase(item_name,item_price,item_quantity,item_description)
             new_cart.add_item(itemToPurchase)
         elif(key=='r'):
@@ -107,7 +117,7 @@ def print_menu(nc):
             item_name = input('Enter name of item to remove:\n')
             new_cart.remove_item(item_name)
         elif(key=='c'):
-            print('CHANGE ITEM QUANTITY:\n')
+            print('CHANGE ITEM QUANTITY')
             item_name = input('Enter the item name:\n')
             tem_quantity = int(input('Enter the new quantity:\n'))
             itemToPurchase = ItemToPurchase(item_name,0,tem_quantity)
@@ -116,15 +126,16 @@ def print_menu(nc):
             print("OUTPUT ITEMS' DESCRIPTIONS")
             new_cart.print_descriptions()
         elif(key=='o'):
-            print('OUTPUT SHOPPING CART\n')
+            print('OUTPUT SHOPPING CART')
             new_cart.print_total()
 
 
 
 
+
 if __name__ == "__main__":
-    customer_name = input("Enter customer's name: \n")
-    current_date = input("Enter today's date: \n")
+    customer_name = input("Enter customer's name:\n")
+    current_date = input("Enter today's date:\n")
     print()
     print("Customer name:",customer_name)
     print("Today's date:",current_date)
