@@ -67,6 +67,15 @@ class ShoppingCart:
             print("Item Descriptions")
             for i in self.cart_item:
                 i.print_item_description()
+if __name__ == "__main__":
+    customer_name = input("Enter customer's name: \n")
+    current_date = input("Enter today's date: \n")
+    print()
+    print("Customer name:",customer_name)
+    print("Today's date:",current_date)
+    nc = ShoppingCart(customer_name,current_date)
+
+
 
 
 
