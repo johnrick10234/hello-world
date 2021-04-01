@@ -1,3 +1,5 @@
+#John Rick Santillan        #1910045
+
 p_dict = {}
 sort_list = []
 
